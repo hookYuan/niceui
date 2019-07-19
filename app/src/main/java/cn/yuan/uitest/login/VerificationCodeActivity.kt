@@ -1,5 +1,6 @@
 package cn.yuan.uitest.login
 
+import android.os.Handler
 import cn.yuan.uitest.R
 import cn.yuan.uitest.login.presenter.VerificationCodePresenter
 import com.tuo.customview.VerificationCodeView
@@ -20,6 +21,14 @@ class VerificationCodeActivity : BaseActivity<VerificationCodePresenter>() {
      * 获取验证码的手机号
      */
     private var mPhone: String? = null
+    /**
+     * 定时器线程
+     */
+    private lateinit var runnalble: Runnable
+    /**
+     * 定时器Handler
+     */
+    private var mStartVideoHandler: Handler = Handler()
 
     override fun initData() {
         //状态栏
@@ -45,11 +54,36 @@ class VerificationCodeActivity : BaseActivity<VerificationCodePresenter>() {
                     }
                 })
 
-//        text_retrieve_code.set
+        timer()
+
+        text_retrieve_code.setOnClickListener {
+            timer()
+        }
+
     }
 
     override fun getLayoutId(): Int {
         return R.layout.activity_verification_code
+    }
+
+    /**
+     * 秒倒计时
+     */
+    private var mSecond: Int = 120
+
+    private fun timer() {
+        mSecond = 120
+        runnalble = Runnable {
+            if (mSecond > 0) {
+                text_retrieve_code.isClickable = false
+                mStartVideoHandler.postDelayed(runnalble, 10000)
+                text_retrieve_code.text = String.format(
+                        getString(R.string.login_verification_retrieve_code), mSecond)
+            }else{
+                text_retrieve_code.isClickable = true
+            }
+        }
+
     }
 
 }
