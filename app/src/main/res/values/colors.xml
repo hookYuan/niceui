@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!--主题色，替换时同时更新主题颜色-->
+	<color name="colorPrimary">#147FFF</color>
+	<color name="colorPrimaryDark">#147FFF</color>
+	<color name="colorAccent">#D81B60</color>
+	
+	<color name="blue_start">#0BB4fF</color>
+	<color name="blue_end">#147FFF</color>
+	<color name="blue_button_start">#b1effd</color>
+	<color name="blue_button_end">#c3e4fc</color>
+	
+	<color name="v2e8cfe">#2E8CFE</color>
+
+</resources>
