@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KotlinDemo</string>
+    <string name="app_name">NiceUI</string>
 
     <string name="login_register">注册</string>
     <string name="login_slogan">欢迎来到UI中国</string>
@@ -16,5 +16,14 @@
     <string name="login_get_verification_code">获取验证码</string>
     <string name="login_verification_code_slogan">输入验证码</string>
     <string name="login_verification_code_subject">已发送4位验证码至 %s</string>
-    <string name="login_verification_retrieve_code">重新获取 (%ss)</string>
+    <string name="login_verification_retrieve_code">重新获取 (%s&#160;s)</string>
+
+    <string name="login_forget_password_slogan">忘记密码</string>
+    <string name="login_next">下一步</string>
+    <string name="login_sure">确定</string>
+    <string name="login_set_login_password_slogan">设置登录密码</string>
+    <string name="login_set_login_password_hint">设置登录密码 长度6-20位</string>
+    <string name="login_set_login_confirm_password_hint">再次确认</string>
+    <string name="login_inconsistent_passwords_hint">两次输入密码不一致</string>
+
 </resources>

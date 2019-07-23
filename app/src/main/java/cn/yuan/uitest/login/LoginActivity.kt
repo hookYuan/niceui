@@ -54,7 +54,7 @@ class LoginActivity : BaseActivity<LoginPresenter>() {
 
         //忘记密码
         text_forget_password.setOnClickListener {
-            open(ForgetPasswordActivity::class.java,null, true)
+            open(ForgetPasswordActivity::class.java,null, false)
         }
 
         //免密登录

@@ -2,7 +2,7 @@ package cn.yuan.uitest.tool
 
 import android.app.Activity
 import androidx.fragment.app.Fragment
-import yuan.core.mvp.Contract
+import yuan.core.mvp.BaseContract
 import yuan.core.mvp.Presenter
 import yuan.core.tool.RouteUtil
 import yuan.core.tool.RouteUtil.REQUESTCODE
@@ -35,7 +35,7 @@ fun <T : Fragment> Fragment.open(clazz: Class<T>, params: RouteUtil.RouteParam? 
 /**
  * Presenter扩展函数
  */
-fun <T : Presenter<V>, V : Contract.View> Presenter<V>.open(
+fun <T : Presenter<V>, V : BaseContract.View> Presenter<V>.open(
     clazz: Class<T>,
     params: RouteUtil.RouteParam? = null,
     finishSelf: Boolean = false
