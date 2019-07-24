@@ -15,6 +15,17 @@ import yuan.core.tool.RouteUtil.REQUESTCODE
  */
 
 /**
+ * login模块 入口Activity全类名
+ */
+const val LOGIN_LOGINACTIVITY: String = "yuan.niceui.login.LoginActivity"
+
+/**
+ * main模块 入口Activity类名
+ */
+const val MAIN_MAINACTIVITY: String = "yuan.niceui.main.MainActivity"
+
+
+/**
  * Activity扩展函数
  */
 fun <T : Activity> Activity.open(

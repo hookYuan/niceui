@@ -1,9 +1,9 @@
 package yuan.niceui.login.presenter
 
-import yuan.niceui.main.MainActivity
 import yuan.niceui.login.LoginActivity
 import yuan.core.mvp.Presenter
 import yuan.core.tool.RouteUtil
+import yuan.niceui.app.tool.MAIN_MAINACTIVITY
 
 /**
  * 描述：
@@ -17,6 +17,7 @@ class LoginPresenter : Presenter<LoginActivity>() {
      * 登录
      */
     fun login(username: String, password: String) {
-        RouteUtil.open(context, MainActivity::class.java, true)
+        val loginSuccessActivityClazz = Class.forName(MAIN_MAINACTIVITY)
+        RouteUtil.open(context, loginSuccessActivityClazz, true)
     }
 }

@@ -30,7 +30,7 @@ class MainAdapter(var data: List<String>) : RecyclerView.Adapter<MainAdapter.Vie
     }
 
 
-    class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var textContent: TextView = view.findViewById(android.R.id.text1)
     }
 }

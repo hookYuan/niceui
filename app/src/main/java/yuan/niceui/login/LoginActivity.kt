@@ -59,7 +59,7 @@ class LoginActivity : BaseActivity<LoginPresenter>() {
 
         //免密登录
         text_no_password.setOnClickListener {
-            open(ForgetPasswordActivity::class.java, null, true)
+            open(RegisterActivity::class.java, null, true)
         }
     }
 
