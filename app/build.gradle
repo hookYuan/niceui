@@ -9,7 +9,7 @@ ext.support = '1.0.0-beta01'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "cn.yuan.kotlindemo"
+        applicationId "yuan.kotlindemo"
         minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
@@ -20,6 +20,19 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/attrs',
+                    'src/main/res/layouts',
+                    'src/main/res/layouts/app',
+                    'src/main/res/layouts/login',
+                    'src/main/res/layouts/main'
+            ]
         }
     }
 }

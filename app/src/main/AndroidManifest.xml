@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cn.yuan.uitest">
+          package="yuan.niceui">
 
     <application
             android:allowBackup="true"
@@ -9,27 +9,32 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".login.SetLoginPasswordActivity">
-        </activity>
-        <activity android:name=".login.VerificationCodeActivity">
-        </activity>
-        <activity android:name=".login.LoginPhoneActivity">
-        </activity>
-        <activity android:name=".login.ForgetPasswordActivity">
-        </activity>
-        <activity android:name=".login.RegisterActivity">
-        </activity>
-        <activity
-                android:name=".login.LoginActivity"
-                android:screenOrientation="portrait">
+
+        <!--Login 模块注册 Start-->
+        <activity android:name=".login.SetLoginPasswordActivity"/>
+
+        <activity android:name=".login.VerificationCodeActivity"/>
+
+        <activity android:name=".login.LoginPhoneActivity"/>
+
+        <activity android:name=".login.ForgetPasswordActivity"/>
+
+        <activity android:name=".login.RegisterActivity"/>
+
+        <activity android:name=".login.LoginActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <!--Login 模块注册 End-->
+
+        <!--Main 模块注册 Start-->
+        <activity android:name="yuan.niceui.main.MainActivity"/>
+
+        <!--Main 模块注册 End-->
     </application>
 
 </manifest>
